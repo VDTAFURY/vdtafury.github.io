@@ -2,42 +2,284 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mohamed Sayed Kamel | vdtafury</title>
-
-    <meta name="description" content="Mohamed Sayed Kamel (vdtafury) - AI & Data Engineer, CTF Player with interest in Cybersecurity.">
-    <meta name="author" content="Mohamed Sayed Kamel">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mohamed Sayed Kamel (vdtafury) - Cybersecurity-Oriented Software Engineer specializing in CTF competitions, AI & Data Engineering, with strong foundations in secure software development.">
+    <meta name="keywords" content="cybersecurity, software engineer, CTF, AI, data engineering, secure coding, CyberTalents, Mohamed Sayed Kamel, vdtafury, portfolio, security, backend, Java, SQL Server, leadership, community, technical lead, Egypt, GDG CHI">
+    <meta name="author" content="Mohamed Sayed Kamel (vdtafury)">
+    <meta property="og:title" content="Mohamed Sayed Kamel | Cybersecurity-Oriented Software Engineer">
+    <meta property="og:description" content="CTF Player, AI & Data Engineering, Secure Software Development, Community Lead.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vdtafury.dev/">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/34362249?v=4">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mohamed Sayed Kamel | Cybersecurity-Oriented Software Engineer">
+    <meta name="twitter:description" content="CTF Player, AI & Data Engineering, Secure Software Development, Community Lead.">
+    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/34362249?v=4">
+    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/34362249?v=4">
+    <title>Mohamed Sayed Kamel | Cybersecurity-Oriented Software Engineer</title>
+    <link rel="stylesheet" href="portfolio_styles.css">
+    <style>
+    /* Scroll Progress Bar */
+    .scroll-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        background: var(--accent-primary);
+        z-index: 9999;
+        transition: width 0.1s;
+    }
+    </style>
 </head>
-
 <body>
+    <!-- Animated Background Canvas -->
+    <canvas id="animatedBg" style="position:fixed;z-index:0;top:0;left:0;width:100vw;height:100vh;pointer-events:none;"></canvas>
+    <!-- Profile Image at Top -->
+    <!-- Profile image will be inside hero-content -->
+    <!-- Page Loader -->
+    <div id="pageLoader" style="position:fixed;z-index:30000;inset:0;display:flex;align-items:center;justify-content:center;background:var(--bg-primary);transition:opacity 0.5s;">
+        <div style="display:flex;flex-direction:column;align-items:center;">
+            <div style="width:48px;height:48px;border:4px solid var(--accent-primary);border-top:4px solid transparent;border-radius:50%;animation:spin 1s linear infinite;"></div>
+            <span style="margin-top:1.2rem;color:var(--accent-primary);font-family:var(--font-mono);font-size:1.1rem;">Loading...</span>
+        </div>
+    </div>
+    <style>
+    @keyframes spin { 100% { transform: rotate(360deg); } }
+    #pageLoader.hide { opacity:0; pointer-events:none; }
+    </style>
+    <!-- Hero Section -->
+    <header id="hero" class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+        
+                <!-- Floating Controls: Theme & Language -->
 
-    <h1>Mohamed Sayed Kamel | vdtafury</h1>
+                <style>
+                .high-contrast {
+                    --bg-primary: #000 !important;
+                    --bg-secondary: #111 !important;
+                    --bg-tertiary: #fff !important;
+                    --text-primary: #fff !important;
+                    --text-secondary: #ff0 !important;
+                    --text-tertiary: #0ff !important;
+                    --accent-primary: #ff0 !important;
+                    --accent-secondary: #0ff !important;
+                    --border-color: #fff !important;
+                }
+                </style>
+            <div class="hero-content fade-in" style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;">
+                <img src="IMG_20251221_072112.jpg" alt="Profile Photo" style="max-width:220px;max-height:220px;border-radius:50%;box-shadow:0 4px 24px rgba(0,0,0,0.15);border:4px solid var(--accent-primary);background:var(--bg-secondary);object-fit:cover;margin-bottom:0.5rem;" loading="lazy">
+                <div class="hero-glitch-wrapper">
+                    <h1 class="hero-name glitch" data-text="Mohamed Sayed Kamel">Mohamed Sayed Kamel</h1>
+                </div>
+                <p class="hero-alias terminal-text">$ whoami → vdtafury</p>
+                <div class="hero-divider"></div>
+                <p class="hero-title" id="typewriterTitle">Cybersecurity-Oriented Software Engineer</p>
+                <p class="hero-subtitle">
+                    <span class="subtitle-item">🛡️ CTF Player</span>
+                    <span class="subtitle-separator">•</span>
+                    <span class="subtitle-item">🧠 AI & Data Engineering</span>
+                    <span class="subtitle-separator">•</span>
+                    <span class="subtitle-item">👥 Technical Community Lead</span>
+                </p>
+                <nav class="hero-links">
+                    <a href="#" id="cvModalBtn" class="hero-link"><span class="link-icon">→</span><span class="link-text">View CV</span></a>
+                    <a href="https://github.com/vdtafury" target="_blank" rel="noopener noreferrer" class="hero-link">
+                        <span class="link-icon">→</span>
+                        <span class="link-text">GitHub</span>
+                    </a>
+                    <a href="https://cybertalents.com/members/vdtafury/profile" target="_blank" rel="noopener noreferrer" class="hero-link">
+                        <span class="link-icon">→</span>
+                        <span class="link-text">CyberTalents</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vdtafury" target="_blank" rel="noopener noreferrer" class="hero-link">
+                        <span class="link-icon">→</span>
+                        <span class="link-text">LinkedIn</span>
+                    </a>
+                </nav>
+                <div class="hero-scroll-indicator">
+                    <span class="scroll-text">Scroll to explore</span>
+                    <span class="scroll-arrow">↓</span>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <p>
-        AI & Data Engineer<br>
-        CTF Player | Cybersecurity
-    </p>
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">About</h2>
+            <div class="about-content">
+                <p>I approach software development through a cybersecurity lens, building systems with security-first principles embedded from the ground up. My foundation lies in object-oriented programming, layered architectures, and secure backend development.</p>
+                <p>As a CTF player ranked in the Top 200 on CyberTalents, I've developed a methodical approach to problem-solving that translates directly into writing resilient, secure code. Currently, I'm advancing into AI and Data Engineering, bridging my security mindset with modern data-driven architectures.</p>
+                <p>My technical work emphasizes clean code, secure patterns, and scalable design—skills refined through hands-on development, competitive challenges, and community leadership.</p>
+            </div>
+        </div>
+    </section>
 
-    <hr>
+    <!-- Focus Areas Section -->
+    <section id="focus" class="section focus">
+        <div class="container">
+            <h2 class="section-title">Focus Areas</h2>
+            <div class="focus-grid">
+                <article class="focus-card">
+                    <h3 class="focus-title">Cybersecurity & CTF</h3>
+                    <p class="focus-description">Competitive problem-solving through Capture The Flag challenges. Methodical approach to vulnerability discovery, exploitation techniques, and defensive strategies. Active CyberTalents player with Top 200 ranking.</p>
+                </article>
+                <article class="focus-card">
+                    <h3 class="focus-title">Software Engineering</h3>
+                    <p class="focus-description">Strong foundations in OOP, design patterns, and layered architectures. Experience building secure, maintainable systems with Java, SQL Server, and modern backend practices. Emphasis on code quality and security-first development.</p>
+                </article>
+                <article class="focus-card">
+                    <h3 class="focus-title">AI & Data Engineering</h3>
+                    <p class="focus-description">Current growth trajectory into AI and data-driven systems. Building expertise in data pipelines, Azure cloud platforms, and machine learning integration. Combining security mindset with modern data engineering practices.</p>
+                </article>
+            </div>
+        </div>
+    </section>
 
-    <p>
-        Welcome to my humble page.<br>
-        بلاش تعمل دوشة علشان مصدع
-    </p>
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title">Selected Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3 class="project-title">Hospital Management System</h3>
+                    <p class="project-tech">Java • SQL Server • Role-Based Access Control</p>
+                    <p class="project-description">Comprehensive healthcare management system implementing role-based access control (RBAC) with distinct user hierarchies. Secure data handling for patient records, appointment scheduling, and medical data. Layered architecture ensuring separation of concerns and data integrity.</p>
+                    <ul class="project-features">
+                        <li>Multi-role authentication system</li>
+                        <li>Encrypted patient data storage</li>
+                        <li>Audit logging for compliance</li>
+                        <li>Input validation and SQL injection prevention</li>
+                    </ul>
+                </article>
+                <article class="project-card">
+                    <h3 class="project-title">Banking Web Management System</h3>
+                    <p class="project-tech">Java • SQL Server • Secure Architecture</p>
+                    <p class="project-description">Financial management platform with emphasis on authentication, authorization, and secure transaction processing. Implements defense-in-depth strategies with input validation, prepared statements, and session management.</p>
+                    <ul class="project-features">
+                        <li>Secure authentication & session handling</li>
+                        <li>Transaction integrity validation</li>
+                        <li>Parameterized queries for database security</li>
+                        <li>Three-tier architecture design</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
 
-    <hr>
+    <!-- CTF & Writeups Section -->
+    <section id="ctf" class="section ctf">
+        <div class="container">
+            <h2 class="section-title">CTF & Writeups</h2>
+            <div class="ctf-content">
+                <p>I actively participate in Capture The Flag competitions, focusing on web security, cryptography, and reverse engineering challenges. My writeups emphasize methodology and learning paths rather than simple walkthroughs.</p>
+                <p>Each writeup documents my thought process, tools used, and key insights gained—designed to help others develop systematic approaches to security challenges.</p>
+                <div class="ctf-links">
+                    <a href="https://cybertalents.com/members/vdtafury" target="_blank" rel="noopener noreferrer" class="ctf-link">View CyberTalents Profile</a>
+                    <a href="https://medium.com/@vdtafury" target="_blank" rel="noopener noreferrer" class="ctf-link">Read Technical Writeups</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <p>
-        <strong>Links</strong><br>
+    <!-- Training Section -->
+    <section id="training" class="section training">
+        <div class="container">
+            <h2 class="section-title">Training & Career Growth</h2>
+            <div class="training-content">
+                <article class="training-item">
+                    <h3 class="training-title">NTI – Microsoft Data Engineer Track</h3>
+                    <p class="training-description">Comprehensive training program covering modern data engineering practices, cloud infrastructure, and AI integration. Focus on building scalable data pipelines and deploying production-ready solutions.</p>
+                    <ul class="training-topics">
+                        <li>SQL & Advanced Database Design</li>
+                        <li>Azure Data Services & Cloud Architecture</li>
+                        <li>ETL Pipelines & Data Transformation</li>
+                        <li>AI for Data Engineers</li>
+                        <li>Production Deployment & DevOps</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
 
-        🌐 <a href="https://vdtafury.github.io/vdtafury-portfolio/" target="_blank">Website</a><br>
-        💻 <a href="https://github.com/vdtafury" target="_blank">GitHub</a><br>
-        💼 <a href="https://www.linkedin.com/in/vdtafury/" target="_blank">LinkedIn</a><br>
-        🐦 <a href="https://x.com/VDTAFURY" target="_blank">X (Twitter)</a><br>
-        📘 <a href="https://www.facebook.com/VDTAFURY" target="_blank">Facebook</a><br>
-        📸 <a href="https://www.instagram.com/vdtafury/" target="_blank">Instagram</a><br>
-        🛡️ <a href="https://cybertalents.com/members/VDTAFURY/profile" target="_blank">CyberTalents (CTF Profile)</a>
-    </p>
+    <!-- Leadership Section -->
+    <section id="leadership" class="section leadership">
+        <div class="container">
+            <h2 class="section-title">Leadership & Community</h2>
+            <div class="leadership-content">
+                <article class="leadership-item">
+                    <h3 class="leadership-title">Technical Teams Lead – GDG CHI</h3>
+                    <p class="leadership-description">Leading technical teams within Google Developer Group Cairo Higher Institute. Coordinating software development initiatives, organizing technical workshops, and mentoring developers in modern engineering practices.</p>
+                </article>
+                <article class="leadership-item">
+                    <h3 class="leadership-title">Software Development Lead</h3>
+                    <p class="leadership-description">Guiding development teams through secure coding practices, architecture decisions, and project delivery. Focus on building technical excellence and fostering collaborative learning environments.</p>
+                </article>
+            </div>
+        </div>
+    </section>
 
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <h2 class="section-title">Testimonials</h2>
+            <div class="testimonials-content" style="max-width:700px;margin:auto;">
+                <blockquote style="background:var(--bg-tertiary);border-left:4px solid var(--accent-primary);padding:1.5rem 1rem 1.5rem 2rem;margin-bottom:1.5rem;border-radius:4px;color:var(--text-secondary);font-style:italic;">
+                    “Mohamed is a highly skilled engineer with a rare security mindset. His code is always clean, robust, and secure.”<br>
+                    <span style="display:block;margin-top:0.5rem;font-size:0.95rem;color:var(--accent-primary);font-style:normal;">— Senior Developer, GDG CHI</span>
+                </blockquote>
+                <blockquote style="background:var(--bg-tertiary);border-left:4px solid var(--accent-primary);padding:1.5rem 1rem 1.5rem 2rem;margin-bottom:1.5rem;border-radius:4px;color:var(--text-secondary);font-style:italic;">
+                    “His leadership and technical guidance helped our team deliver secure, scalable solutions.”<br>
+                    <span style="display:block;margin-top:0.5rem;font-size:0.95rem;color:var(--accent-primary);font-style:normal;">— Team Member</span>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Contact & Links</h2>
+            <nav class="contact-links">
+                <a href="https://github.com/vdtafury" target="_blank" rel="noopener noreferrer" class="contact-link">GitHub</a>
+                <a href="https://www.linkedin.com/in/vdtafury" target="_blank" rel="noopener noreferrer" class="contact-link">LinkedIn</a>
+                <a href="https://cybertalents.com/members/vdtafury" target="_blank" rel="noopener noreferrer" class="contact-link">CyberTalents</a>
+                <a href="https://x.com/vdtafury" target="_blank" rel="noopener noreferrer" class="contact-link">X (Twitter)</a>
+                <a href="mailto:mohamed@vdtafury.dev" class="contact-link">Email</a>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">Welcome to my humble page.</p>
+            <p class="footer-text-ar">بلاش تعمل دوشة علشان مصدع</p>
+        </div>
+    </footer>
+    <!-- Back to Top Button -->
+    <button id="backToTop" title="Back to Top" style="display:none;position:fixed;bottom:32px;right:32px;z-index:10000;background:var(--accent-primary);color:var(--bg-primary);border:none;border-radius:50%;width:48px;height:48px;box-shadow:0 2px 8px rgba(0,0,0,0.2);font-size:2rem;cursor:pointer;transition:background 0.2s;">
+        ↑
+    </button>
+
+    <!-- CV Modal -->
+    <div id="cvModal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.7);z-index:20000;align-items:center;justify-content:center;">
+        <div style="background:var(--bg-secondary);padding:2rem 1.5rem;max-width:500px;width:90vw;border-radius:8px;box-shadow:0 4px 32px rgba(0,0,0,0.3);position:relative;">
+            <button id="closeCvModal" style="position:absolute;top:12px;right:12px;background:none;border:none;font-size:1.5rem;color:var(--accent-primary);cursor:pointer;">×</button>
+            <h2 style="color:var(--accent-primary);margin-bottom:1rem;">My CV</h2>
+            <p style="color:var(--text-secondary);margin-bottom:1rem;">للحصول على نسخة كاملة من السيرة الذاتية، تواصل معي عبر الإيميل أو LinkedIn.</p>
+            <ul style="color:var(--text-primary);font-size:1rem;line-height:1.7;">
+                <li><b>Name:</b> Mohamed Sayed Kamel</li>
+                <li><b>Email:</b> vdtafury@gmail.com</li>
+                <li><b>Role:</b> Cybersecurity-Oriented Software Engineer</li>
+                <li><b>CTF Player:</b> Top 200 CyberTalents</li>
+                <li><b>Technical Lead:</b> GDG CHI</li>
+                <li><b>Skills:</b> Java, SQL Server, Secure Coding, AI, Data Engineering</li>
+            </ul>
+        </div>
+    </div>
+    <script src="portfolio_script.js"></script>
 </body>
 </html>
