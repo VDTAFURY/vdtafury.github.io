@@ -162,7 +162,7 @@ function initLangToggle() {
         let width = window.innerWidth;
         let height = window.innerHeight;
         let particles = [];
-        const PARTICLE_COUNT = 60;
+        const PARTICLE_COUNT = 120;
         function resize() {
             dpr = window.devicePixelRatio || 1;
             width = window.innerWidth;
@@ -207,7 +207,7 @@ function initLangToggle() {
                 for (let j=i+1; j<particles.length; ++j) {
                     const a = particles[i], b = particles[j];
                     const dist = Math.hypot(a.x-b.x, a.y-b.y);
-                    if (dist < 90) {
+                    if (dist < 120) {
                         ctx.save();
                         ctx.globalAlpha = 0.08;
                         ctx.beginPath();
